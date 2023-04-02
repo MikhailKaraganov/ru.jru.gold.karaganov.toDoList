@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>To do list</title>
     <link href="style/main.css" rel="stylesheet">
-    <script src="script/jQuery.js"></script>
     <script src="script/my.js"></script>
+    <script src="script/jquery.js"></script>
 </head>
 
 <table>
@@ -17,7 +17,7 @@
     </tr>
     </thead>
     <tbody>
-        <tr th:each="task : ${tasks}">
+        <tr th:each="task, number : ${tasks}">
             <td th:text="${task.id}"></td>
             <td th:text="${task.description}" th:id="'description_'+${task.id}" />
             <td th:text="${task.status}" th:id="'status_'+${task.id}"/>
